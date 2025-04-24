@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import Navbar from "./../components/navbar";
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,27 +24,27 @@ export default function Index() {
           </div>
         </div>
       </header>
-
+      <Navbar />
       <nav>
         <div className="container">
           <button className="hamburger">☰</button>
           <ul className="nav-links">
             <li>
-              <a href="#" className="active">
-                Escalar Time
+              <a href="#" >
+                Home
               </a>
             </li>
             <li>
-              <a href="#">Liga</a>
+              <a href="#" className="active">Escalar Time</a>
             </li>
             <li>
-              <a href="#">Mercado</a>
+              <a href="#">Táticas</a>
             </li>
             <li>
-              <a href="#">Pontuação</a>
+              <a href="#">Campeonatos</a>
             </li>
             <li>
-              <a href="#">Estatísticas</a>
+              <a href="#">Ranking</a>
             </li>
           </ul>
         </div>
@@ -74,31 +75,39 @@ export default function Index() {
           <h2>Meu Time</h2>
           <p>Formação: 4-3-3</p>
 
-          <div className="field">
-            <div className="field-lines"></div>
-            <div className="center-circle"></div>
-            <div className="player-positions">
-              <div className="position-row">
-                <div className="player-spot filled">9</div>
-                <div className="player-spot filled">11</div>
-                <div className="player-spot filled">7</div>
-              </div>
-              <div className="position-row">
-                <div className="player-spot filled">8</div>
-                <div className="player-spot filled">5</div>
-                <div className="player-spot filled">10</div>
-              </div>
-              <div className="position-row">
-                <div className="player-spot filled">6</div>
-                <div className="player-spot filled">4</div>
-                <div className="player-spot filled">3</div>
-                <div className="player-spot filled">2</div>
-              </div>
-              <div className="position-row">
-                <div className="player-spot filled">1</div>
-              </div>
-            </div>
-          </div>
+          
+
+
+    <article
+      className={`relative h-2/3 max-h-[50rem] w-full max-w-[35rem] flex flex-col justify-between border-gray-300 border-4 rounded-lg`}
+      style={{
+        background:
+          "repeating-linear-gradient(#2d561c, #2d561c 9.09%, #356029 9.09%, #356029 18.18%)",
+      }}
+    >
+      <div className="absolute bg-gray-300 top-0 left-0 w-4 h-4 rounded-br-full"></div>
+      <div className="absolute bg-gray-300 top-0 right-0 w-4 h-4 rounded-bl-full"></div>
+      <div className="absolute bg-gray-300 bottom-0 left-0 w-4 h-4 rounded-tr-full"></div>
+      <div className="absolute bg-gray-300 bottom-0 right-0 w-4 h-4 rounded-tl-full"></div>
+      <section className="flex justify-center flex-1">
+        <div className="flex justify-center h-1/2 w-1/2 border-4 border-t-0 border-gray-300 rounded-b-lg">
+          <div className="h-2/5 w-1/2 border-4 border-t-0 border-gray-300 rounded-b-lg"></div>
+        </div>
+      </section>
+      <section className="flex justify-center items-center relative flex-1">
+        <div className="bg-gray-300 h-1 w-full absolute "></div>
+        <div className="w-1/3 aspect-square rounded-full border-4 border-gray-300"></div>
+        <div className="w-4 aspect-square rounded-full bg-gray-300 absolute"></div>
+      </section>
+      <section className="flex justify-center flex-1 items-end">
+        <div className="flex justify-center h-1/2 w-1/2 border-4 border-b-0 border-gray-300 items-end rounded-t-lg">
+          <div className="h-2/5 w-1/2 border-4 border-b-0 border-gray-300 rounded-t-lg"></div>
+        </div>
+      </section>
+      <main className="absolute w-full h-full">{}</main>
+    </article>
+  
+
 
           <button className="cta-button">Confirmar Escalação</button>
         </div>
